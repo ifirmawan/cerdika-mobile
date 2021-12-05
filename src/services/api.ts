@@ -1,8 +1,8 @@
-import {API_BASE_URL} from '@env';
 import axios from 'axios';
+import Config from 'react-native-config';
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: Config.API_URL,
 });
 
 export default api;

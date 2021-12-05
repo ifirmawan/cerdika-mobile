@@ -1,4 +1,4 @@
-import {Box, Button, FormControl, Heading, Input, Stack} from 'native-base';
+import {Button, Center, FormControl, Heading, Input, Stack} from 'native-base';
 import React from 'react';
 
 export type Props = {
@@ -7,7 +7,7 @@ export type Props = {
 
 const RegisterScreen: React.FC<Props> = () => {
   return (
-    <Box>
+    <Center flex={1} px="3">
       <Heading mb="5">Register</Heading>
       <FormControl>
         <Stack space={5}>
@@ -29,10 +29,10 @@ const RegisterScreen: React.FC<Props> = () => {
               placeholder="Password"
             />
           </Stack>
-          <Stack>
+          <Stack mb="6">
             <FormControl.Label>Confirm Password</FormControl.Label>
             <Input
-              type="password_confirmation"
+              type="password"
               variant="underlined"
               p={2}
               placeholder="Password"
@@ -43,7 +43,7 @@ const RegisterScreen: React.FC<Props> = () => {
           </Stack>
         </Stack>
       </FormControl>
-    </Box>
+    </Center>
   );
 };
 

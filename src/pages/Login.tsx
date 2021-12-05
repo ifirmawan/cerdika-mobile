@@ -1,8 +1,10 @@
 import {
+  Box,
   Button,
   Center,
   FormControl,
   Heading,
+  HStack,
   Input,
   Stack,
   Text,
@@ -48,12 +50,19 @@ const LoginScreen: React.FC<Props> = ({navigation}) => {
         </Stack>
         <Button>Submit</Button>
       </FormControl>
-      <VStack p="6">
-        <Text>Don't have an account?</Text>
-        <Button onPress={() => navigation.navigate('Register')}>
-          Register here
-        </Button>
-      </VStack>
+      <HStack p="6" mt="6" alignItems="baseline">
+        <Box>
+          <Text>Don't have an account?</Text>
+        </Box>
+        <Box>
+          <Button
+            onPress={() => navigation.navigate('Register')}
+            variant="link"
+          >
+            Register here
+          </Button>
+        </Box>
+      </HStack>
     </Center>
   );
 };
